@@ -3,14 +3,19 @@ import './TicTacToe.css'
 
 const TicTacToe = () => {
 const [turns, setTurns] = useState('x')
+const [cells, setCells] = useState(Array(9).fill(''))
 
-const handleClick = () => {
+const handleClick = (num) => {
+	let squares = [...cells]
     if (turns === 'x') {
+		squares[num] = 'x'
         setTurns('o');
     } else {
+		squares[num] = 'o'
         setTurns('x');
     }
-    
+	setCells(squares)
+    console.log(squares)
 }
 
  const Cell = ({box}) => {
