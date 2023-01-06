@@ -29,8 +29,6 @@ const handleClick = (box) => {
 
  const Cell = ({box}) => {
     return  <td onClick={()=> handleClick(box)}>{cells[box]}</td>
- }
-
 
 
   return (
